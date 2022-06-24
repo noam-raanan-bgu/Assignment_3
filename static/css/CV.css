@@ -18,7 +18,7 @@
 
 #about {
   grid-area: tool-bar;
-  background-color: blanchedalmond;
+  background-color: rgb(205, 255, 255);
   height: 20vh;
   margin: 10px;
   font-size: xx-large;
@@ -26,7 +26,7 @@
 
 #experience {
   grid-area: menu;
-  background-color: seagreen;
+  background-color: rgb(146, 235, 185);
   height: 20vh;
   margin: 10px;
   font-size: xx-large;
