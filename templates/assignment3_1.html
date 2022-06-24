@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Assignment 3</title>
+  </head>
+  <body>
+    {% extends 'base.html' %} {% block title%} assignment3 {% endblock %} {%
+    block body %} {{ super() }}
+
+    <h1>{{ name|upper }}</h1>
+    {% if name=='Noam Raanan' %}
+    <h2>Hobbies</h2>
+    <h3>
+      <p>
+        Sports :{{ sport1|default('No answer' ,false )}} ,{{ sport2| safe }}
+      </p>
+      <p>Programming: {{prog|upper }} , {{ prog2|lower }}</p>
+      <p>
+        Favorite TV shows :{% for show in shows %}
+        <li>{{ show }}</li>
+        {% endfor %}
+      </p>
+    </h3>
+    {% else %}
+    <h3>No information</h3>
+    {% endif %} {% endblock %}
+  </body>
+</html>
