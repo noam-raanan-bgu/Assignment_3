@@ -11,6 +11,12 @@
       href="/assignment3_1"
       >Assignment3</a
     >
+    |<a href="/assignment3_2">Assignment3_2</a>
+
+    {% if session.username %} |
+    <a href="/logout">logout</a>
+    <h3>Hello {{ session.username }}</h3>
+    {% endif %}
     <hr />
   </body>
 </html>
