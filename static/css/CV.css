@@ -1,65 +1,48 @@
-#grid-con {
-  display: grid;
-  grid-template-areas:
-    "button button button button button"
-    "header header header header header  "
-    "tool-bar tool-bar menu menu menu"
-    "text text text text text "
-    "text text text text text "
-    "text text text text text ";
-}
-
 #header {
-  grid-area: header;
-  background-color: snow;
-  height: 10vh;
-  width: 100%;
+    background: black;
+    font-family: Arial;
+    height: 50px;
 }
 
-#about {
-  grid-area: tool-bar;
-  background-color: rgb(205, 255, 255);
-  height: 20vh;
-  margin: 10px;
-  font-size: xx-large;
+.innertext {
+    margin: 0px;
+    padding: 10px;
+    font-family: Arial;
+    color: #053ba0;
+    background-color: rgb(136, 136, 244);
 }
 
-#experience {
-  grid-area: menu;
-  background-color: rgb(146, 235, 185);
-  height: 20vh;
-  margin: 10px;
-  font-size: xx-large;
+#footer {
+    clear: left;
+    width: 100%;
+    background: rgba(133, 227, 207, 0.806);
+    color: rgb(236, 233, 233);
+    font-family: Arial;
+    text-align: center;
+    padding: 4px;
 }
 
-#text {
-  grid-area: text;
-  background-color: tan;
-  height: 50vh;
-  margin: 10px;
-  font-size: xxx-large;
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    background-color: #000;
 }
 
-@media only screen and (max-width: 600px) {
-  body {
-    background-color: blue;
-  }
-  #text {
-    color: cornsilk;
-  }
-}
-div {
-  height: 90vh;
-  display: flex;
+li {
+    float: left;
+    border-right:1px solid rgb(182, 182, 182);
 }
 
-body h1 {
-  text-align: center;
-  color: purple;
+li:last-child {
+    border-right: none;
 }
-#Fname {
-  background-color: red;
-}
-.Z {
-  background-color: yellow;
+
+li a {
+    display: block;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
 }

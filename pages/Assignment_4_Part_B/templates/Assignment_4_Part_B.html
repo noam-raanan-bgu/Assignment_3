@@ -1,10 +1,36 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
-</head>
-<body>
-$END$
-</body>
-</html>
+{% extends 'base.html' %} {% block title%} Assignment_4 Part B {% endblock %} {%
+block body %}
+<h1>JSON of Users</h1>
+{#    {% for user in users %}#}
+{% if users %}
+{{ users }}
+{% endif %}
+<br>
+<hr>
+{#    {% endfor %}#}
+
+<h1>Get users by FE:</h1>
+<h3>User ID:<input type="number" id="input_number" name="user_num" placeholder="ID"> <br></h3>
+    <input type="submit" onclick="getUsers()" value="Get User">
+    <div id="output"></div>
+
+<main>
+
+</main>
+<script src="{{url_for('Assignment_4_Part_B.static', filename='js/Assignment_4_Part_B.js')}}"></script>
+<hr>
+
+
+<h1>Get users by BE</h1>
+<form action="/Assignment_4/outer_source" method="get">
+    <input type="number" name="id" placeholder="User ID">
+    <input type="submit" value="Get Users From Backend">
+</form>
+{% if user %}
+<p>
+    <img src="{{ user.data.avatar }}" alt="Picture">
+<p><b>Name: </b>{{ user.data.first_name}} {{ user.data.last_name }}</p>
+<a href="mailto:{{user.data.email}}">Send an email</a>
+{% endif %}
+</p>
+{% endblock %}

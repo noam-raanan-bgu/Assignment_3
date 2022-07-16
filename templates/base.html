@@ -3,10 +3,14 @@
   <head>
     <meta charset="UTF-8" />
     <title>{% block title %} {% endblock %}</title>
+      <link rel="stylesheet" type = text/css href="{{ url_for('static', filename='css/CV.css') }}">
   </head>
   <body>
     {% include 'header.html' %} {% block body %}
     <h4>This is a messege from SuperMan!!</h4>
+    {% if session.username %}
+      <h3>Hello {{ session.username }}</h3>
+    {% endif %}
     {% endblock %}
   </body>
 </html>
